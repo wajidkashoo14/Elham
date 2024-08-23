@@ -1,3 +1,4 @@
+import prisma from "@/app/lib/db";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -23,9 +24,21 @@ import {
   TableRow,
 } from "@/components/ui/table";
 import { MoreHorizontal, PlusCircle, User2Icon } from "lucide-react";
+import Image from "next/image";
 import Link from "next/link";
 
-export default function ProductsRouter() {
+async function fetchData() {
+  const data = await prisma.product.findMany({
+    orderBy: {
+      createdAt: "desc",
+    },
+  });
+
+  return data;
+}
+
+export default async function ProductsRouter() {
+  const data = await fetchData();
   return (
     <>
       <div className="flex items-center justify-end">
@@ -53,35 +66,42 @@ export default function ProductsRouter() {
               </TableRow>
             </TableHeader>
             <TableBody>
-              <TableRow>
-                <TableCell>
-                  <User2Icon className="h-10 w-10" />
-                </TableCell>
-                <TableCell>vase</TableCell>
-                <TableCell>Active</TableCell>
-                <TableCell>$20.00</TableCell>
-                <TableCell>13-8-2024</TableCell>
-                <TableCell className="text-end">
-                  <DropdownMenu>
-                    <DropdownMenuTrigger asChild>
-                      <Button size="icon" variant="ghost" className="h-4 w-4">
-                        <MoreHorizontal />
-                      </Button>
-                    </DropdownMenuTrigger>
-                    <DropdownMenuContent align="end">
-                      <DropdownMenuLabel>Actions</DropdownMenuLabel>
-                      <DropdownMenuSeparator />
-                      <DropdownMenuItem>Edit</DropdownMenuItem>
-                      <DropdownMenuItem>Delete</DropdownMenuItem>
-                    </DropdownMenuContent>
-                  </DropdownMenu>
-                </TableCell>
-              </TableRow>
+              {data.map((item) => (
+                <TableRow key={item.id}>
+                  <TableCell>
+                    <Image
+                      src={item.images[0]}
+                      alt="Product Image"
+                      height={64}
+                      width={64}
+                      className="rounded-md object-cover h-16 w-16"
+                    />
+                  </TableCell>
+                  <TableCell>vase</TableCell>
+                  <TableCell>Active</TableCell>
+                  <TableCell>$20.00</TableCell>
+                  <TableCell>13-8-2024</TableCell>
+                  <TableCell className="text-end">
+                    <DropdownMenu>
+                      <DropdownMenuTrigger asChild>
+                        <Button size="icon" variant="ghost" className="h-4 w-4">
+                          <MoreHorizontal />
+                        </Button>
+                      </DropdownMenuTrigger>
+                      <DropdownMenuContent align="end">
+                        <DropdownMenuLabel>Actions</DropdownMenuLabel>
+                        <DropdownMenuSeparator />
+                        <DropdownMenuItem>Edit</DropdownMenuItem>
+                        <DropdownMenuItem>Delete</DropdownMenuItem>
+                      </DropdownMenuContent>
+                    </DropdownMenu>
+                  </TableCell>
+                </TableRow>
+              ))}
             </TableBody>
           </Table>
         </CardContent>
       </Card>
     </>
   );
-  
 }

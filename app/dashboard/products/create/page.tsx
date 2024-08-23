@@ -29,6 +29,8 @@ import { parseWithZod } from "@conform-to/zod";
 import { productSchema } from "@/app/lib/zodSchemas";
 import { useState } from "react";
 import Image from "next/image";
+import { category } from "@/app/lib/categories";
+import { SubmitButton } from "@/app/components/SubmitButton";
 
 export default function AddProduct() {
   const [images, setImages] = useState<string[]>([]);
@@ -100,6 +102,7 @@ export default function AddProduct() {
             <div className="flex flex-col gap-3">
               <Label>Featured Product</Label>
               <Switch
+
                 key={fields.isFeatured.key}
                 name={fields.isFeatured.name}
                 defaultValue={fields.isFeatured.initialValue}
@@ -125,7 +128,34 @@ export default function AddProduct() {
               <p className="text-red-500">{fields.status.errors}</p>
             </div>
             <div className="flex flex-col gap-3">
+              <Label>Category</Label>
+              <Select
+                key={fields.category.key}
+                name={fields.category.name}
+                defaultValue={fields.category.initialValue}
+              >
+                <SelectTrigger>
+                  <SelectValue placeholder="Select category" />
+                </SelectTrigger>
+                <SelectContent>
+                  {category.map((category) => (
+                    <SelectItem key={category.id} value={category.name}>
+                      {category.title}
+                    </SelectItem>
+                  ))}
+                </SelectContent>
+              </Select>
+              <p className="text-red-500">{fields.category.errors}</p>
+            </div>
+            <div className="flex flex-col gap-3">
               <Label>Images</Label>
+              <input
+                type="hidden"
+                value={images}
+                key={fields.images.key}
+                name={fields.images.name}
+                defaultValue={fields.images.initialValue as any}
+              />
               {images.length > 0 ? (
                 <div className="flex gap-5">
                   {images.map((image, index) => (
@@ -159,11 +189,12 @@ export default function AddProduct() {
                   }}
                 />
               )}
+              <p className="text-red-500">{fields.images.errors}</p>
             </div>
           </div>
         </CardContent>
         <CardFooter>
-          <Button>Create Product</Button>
+          <SubmitButton />
         </CardFooter>
       </Card>
     </form>
