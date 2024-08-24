@@ -1,5 +1,5 @@
 "use client";
-import { createProduct } from "@/app/actions";
+import { createProduct, editProduct } from "@/app/actions";
 import { UploadDropzone } from "@/app/lib/uploadthing";
 import { Button } from "@/components/ui/button";
 import {
@@ -31,10 +31,24 @@ import { useState } from "react";
 import Image from "next/image";
 import { category } from "@/app/lib/categories";
 import { SubmitButton } from "@/app/components/SubmitButton";
+import { type $Enums } from "@prisma/client";
 
-export default function AddProduct() {
-  const [images, setImages] = useState<string[]>([]);
-  const [lastResult, action] = useFormState(createProduct, undefined);
+interface AppProps {
+  data: {
+    id: string;
+    name: string;
+    description: string;
+    status: $Enums.ProductStatus;
+    price: number;
+    images: string[];
+    category: $Enums.Category;
+    isFeatured: boolean;
+  };
+}
+
+export default function EditFrom({ data }: AppProps) {
+  const [images, setImages] = useState<string[]>(data.images);
+  const [lastResult, action] = useFormState(editProduct, undefined);
   const [form, fields] = useForm({
     lastResult,
     onValidate({ formData }) {
@@ -44,12 +58,14 @@ export default function AddProduct() {
     shouldValidate: "onBlur",
     shouldRevalidate: "onInput",
   });
-
+  
   const handleDelete = (index: number) => {
     setImages(images.filter((_, i) => i !== index));
   };
+
   return (
     <form id={form.id} onSubmit={form.onSubmit} action={action}>
+      <input type="hidden" name="productId" value={data.id}/>
       <div className="flex items-center gap-4">
         <Button asChild variant="outline" size="icon">
           <Link href="/dashboard/products">
@@ -60,7 +76,7 @@ export default function AddProduct() {
       <Card className="mt-5">
         <CardHeader>
           <CardTitle>Product Details</CardTitle>
-          <CardDescription>Add a new product</CardDescription>
+          <CardDescription>In this form you can update your product</CardDescription>
         </CardHeader>
         <CardContent>
           <div className="flex flex-col gap-6">
@@ -72,7 +88,7 @@ export default function AddProduct() {
                 className="w-full"
                 key={fields.name.key}
                 name={fields.name.name}
-                defaultValue={fields.name.initialValue}
+                defaultValue={data.name}
               />
               <p className="text-red-500">{fields.name.errors}</p>
             </div>
@@ -81,7 +97,7 @@ export default function AddProduct() {
               <Textarea
                 key={fields.description.key}
                 name={fields.description.name}
-                defaultValue={fields.description.initialValue}
+                defaultValue={data.description}
                 placeholder="Write your description here..."
                 className="w-full"
               />
@@ -95,17 +111,16 @@ export default function AddProduct() {
                 className="w-full"
                 key={fields.price.key}
                 name={fields.price.name}
-                defaultValue={fields.price.initialValue}
+                defaultValue={data.price}
               />
               <p className="text-red-500">{fields.price.errors}</p>
             </div>
             <div className="flex flex-col gap-3">
               <Label>Featured Product</Label>
               <Switch
-
                 key={fields.isFeatured.key}
                 name={fields.isFeatured.name}
-                defaultValue={fields.isFeatured.initialValue}
+                checked={data.isFeatured}
               />
               <p className="text-red-500">{fields.isFeatured.errors}</p>
             </div>
@@ -114,7 +129,7 @@ export default function AddProduct() {
               <Select
                 key={fields.status.key}
                 name={fields.status.name}
-                defaultValue={fields.status.initialValue}
+                defaultValue={data.status}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select Status" />
@@ -132,7 +147,7 @@ export default function AddProduct() {
               <Select
                 key={fields.category.key}
                 name={fields.category.name}
-                defaultValue={fields.category.initialValue}
+                defaultValue={data.category}
               >
                 <SelectTrigger>
                   <SelectValue placeholder="Select category" />
@@ -194,7 +209,7 @@ export default function AddProduct() {
           </div>
         </CardContent>
         <CardFooter>
-          <SubmitButton text="Create Product" />
+          <SubmitButton text="Edit Product"/>
         </CardFooter>
       </Card>
     </form>

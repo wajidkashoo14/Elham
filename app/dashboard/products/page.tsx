@@ -77,10 +77,12 @@ export default async function ProductsRouter() {
                       className="rounded-md object-cover h-16 w-16"
                     />
                   </TableCell>
-                  <TableCell>vase</TableCell>
-                  <TableCell>Active</TableCell>
-                  <TableCell>$20.00</TableCell>
-                  <TableCell>13-8-2024</TableCell>
+                  <TableCell>{item.name}</TableCell>
+                  <TableCell>{item.status}</TableCell>
+                  <TableCell>${item.price}</TableCell>
+                  <TableCell>
+                    {new Intl.DateTimeFormat("en-US").format(item.createdAt)}
+                  </TableCell>
                   <TableCell className="text-end">
                     <DropdownMenu>
                       <DropdownMenuTrigger asChild>
@@ -91,7 +93,11 @@ export default async function ProductsRouter() {
                       <DropdownMenuContent align="end">
                         <DropdownMenuLabel>Actions</DropdownMenuLabel>
                         <DropdownMenuSeparator />
-                        <DropdownMenuItem>Edit</DropdownMenuItem>
+                        <DropdownMenuItem asChild>
+                          <Link href={`/dashboard/products/${item.id}`}>
+                            Edit
+                          </Link>
+                        </DropdownMenuItem>
                         <DropdownMenuItem>Delete</DropdownMenuItem>
                       </DropdownMenuContent>
                     </DropdownMenu>
