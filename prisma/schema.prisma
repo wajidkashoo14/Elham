@@ -25,7 +25,15 @@ model Product {
   price       Int
   images      String[]
   category    Category
-  isFeatured  Boolean @default(false)
+  isFeatured  Boolean       @default(false)
+
+  createdAt DateTime @default(now())
+}
+
+model Banner {
+  id           String @id @default(uuid())
+  title        String
+  imagesString String
 
   createdAt DateTime @default(now())
 }

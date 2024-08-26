@@ -9,3 +9,9 @@ export const productSchema = z.object({
   category: z.enum(["handicrafts", "shawls", "cloths"]),
   isFeatured: z.boolean().optional(),
 });
+
+
+export const bannerSchema = z.object({
+  title: z.string(), 
+  imagesString: z.string(),
+})
