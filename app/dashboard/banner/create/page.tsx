@@ -69,12 +69,19 @@ export default function BannerRoute() {
 
             <div className="flex flex-col gap-3">
               <Label>Images</Label>
+              <input
+                type="hidden"
+                value={image}
+                key={fields.imagesString.key}
+                name={fields.imagesString.name}
+                defaultValue={fields.imagesString.initialValue}
+              />
               {image !== undefined ? (
                 <Image
                   src={image}
-                  height={100}
-                  width={100}
-                  className="h-[100px] w-[100px]"
+                  height={200}
+                  width={200}
+                  className="h-[200px] w-[200px] object-cover border rounded-lg"
                   alt="Banner Image"
                 />
               ) : (
@@ -88,6 +95,7 @@ export default function BannerRoute() {
                   endpoint="bannerImageRoute"
                 />
               )}
+               <p className="text-red-500">{fields.imagesString.errors}</p>
             </div>
           </div>
         </CardContent>
