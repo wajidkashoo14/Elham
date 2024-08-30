@@ -1,5 +1,5 @@
 "use client";
-import { createProduct } from "@/app/actions";
+import { createBanner } from "@/app/actions";
 import { SubmitButton } from "@/app/components/SubmitButton";
 import { UploadDropzone } from "@/app/lib/uploadthing";
 import { bannerSchema } from "@/app/lib/zodSchemas";
@@ -24,7 +24,7 @@ import { useFormState } from "react-dom";
 
 export default function BannerRoute() {
   const [image, setImage] = useState<string | undefined>(undefined);
-  const [lastResult, action] = useFormState(createProduct, undefined);
+  const [lastResult, action] = useFormState(createBanner, undefined);
 
   const [form, fields] = useForm({
     lastResult,
@@ -72,9 +72,9 @@ export default function BannerRoute() {
               <input
                 type="hidden"
                 value={image}
-                key={fields.imagesString.key}
-                name={fields.imagesString.name}
-                defaultValue={fields.imagesString.initialValue}
+                key={fields.imageString.key}
+                name={fields.imageString.name}
+                defaultValue={fields.imageString.initialValue}
               />
               {image !== undefined ? (
                 <Image
@@ -95,7 +95,7 @@ export default function BannerRoute() {
                   endpoint="bannerImageRoute"
                 />
               )}
-               <p className="text-red-500">{fields.imagesString.errors}</p>
+              <p className="text-red-500">{fields.imageString.errors}</p>
             </div>
           </div>
         </CardContent>

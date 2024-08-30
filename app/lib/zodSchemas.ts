@@ -13,5 +13,5 @@ export const productSchema = z.object({
 
 export const bannerSchema = z.object({
   title: z.string(), 
-  imagesString: z.string(),
+  imageString: z.string(),
 })
