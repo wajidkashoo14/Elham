@@ -50,7 +50,7 @@ export function ProductCard({ item }: cardProps) {
         {item.description}
       </p>
       <Button className="w-full mt-5" asChild>
-        <Link href={`/products/${item.id}`}>Learn More!</Link>
+        <Link href={`/product/${item.id}`}>Learn More!</Link>
       </Button>
     </div>
   );
