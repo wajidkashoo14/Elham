@@ -26,7 +26,7 @@ export default async function Navbar() {
           />
         </Link>
       </div>
-      <div>
+      <div className="ml-16">
         <NavbarLinks />
       </div>
       {user ? (
