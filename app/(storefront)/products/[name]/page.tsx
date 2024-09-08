@@ -1,10 +1,11 @@
+import { ProductCard } from "@/app/components/storefront/ProductCard";
 import prisma from "@/app/lib/db";
 import { notFound } from "next/navigation";
 
 async function fetchData(productCategory: string) {
   switch (productCategory) {
     case "all": {
-      const data = prisma.product.findMany({
+      const data = await prisma.product.findMany({
         select: {
           id: true,
           name: true,
@@ -22,7 +23,7 @@ async function fetchData(productCategory: string) {
       };
     }
     case "handicrafts": {
-      const data = prisma.product.findMany({
+      const data = await prisma.product.findMany({
         where: {
           status: "published",
           category: "handicrafts",
@@ -41,7 +42,7 @@ async function fetchData(productCategory: string) {
       };
     }
     case "clothing": {
-      const data = prisma.product.findMany({
+      const data = await prisma.product.findMany({
         where: {
           status: "published",
           category: "cloths",
@@ -66,6 +67,20 @@ async function fetchData(productCategory: string) {
   }
 }
 
-export default function CategoriesPage() {
-  return <h1>i like autum</h1>;
+export default async function CategoriesPage({
+  params,
+}: {
+  params: { name: string };
+}) {
+  const { data, title } = await fetchData(params.name);
+  return (
+    <section>
+      <h1 className="font-semibold text-3xl my-5">{title}</h1>
+      <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
+        {data.map((item) => (
+          <ProductCard item={item} key={item.id} />
+        ))}
+      </div>
+    </section>
+  );
 }
