@@ -58,9 +58,31 @@ export function DeleteItem() {
   return (
     <>
       {pending ? (
-        <button className="font-medium text-primary text-end">Removing...</button>
+        <button className="font-medium text-primary text-end">
+          Removing...
+        </button>
       ) : (
-        <button type="submit" className="font-medium text-primary text-end">Delete</button>
+        <button type="submit" className="font-medium text-primary text-end">
+          Delete
+        </button>
+      )}
+    </>
+  );
+}
+
+export function CheckoutButton() {
+  const { pending } = useFormStatus();
+
+  return (
+    <>
+      {pending ? (
+        <Button size="lg" className="w-full mt-5">
+          <Loader2 className="mr-2 h-5 w-5 animate-spin" />Please wait
+        </Button>
+      ) : (
+        <Button type="submit" size="lg" className="w-full mt-5">
+          Checkout
+        </Button>
       )}
     </>
   );
