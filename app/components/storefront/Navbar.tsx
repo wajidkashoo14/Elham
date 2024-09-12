@@ -27,7 +27,7 @@ export default async function Navbar() {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="/img3.png"
+            src="/primarylogo.png"
             height={80}
             width={150}
             alt="Elham Logo"
