@@ -120,8 +120,8 @@ export async function createBanner(prevState: any, formData: FormData) {
 
   await prisma.banner.create({
     data: {
-      title: submission.value.title,
-      imageString: submission.value.imageString,
+      title: submission?.value?.title,
+      imageString: submission?.value?.imageString,
     },
   });
 
