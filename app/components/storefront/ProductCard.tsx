@@ -27,7 +27,7 @@ export function ProductCard({ item }: cardProps) {
       <Carousel className="w-full mx-auto">
         <CarouselContent>
           {item.images.map((item, index) => (
-            <CarouselItem>
+            <CarouselItem key={index}>
               <div className="relative h-[330px]">
                 <Image
                   src={item}
