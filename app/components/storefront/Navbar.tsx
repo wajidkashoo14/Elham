@@ -31,7 +31,6 @@ export default async function Navbar() {
             width={150}
             alt="Elham Logo"
           />
-          Elham
         </Link>
       </div>
       <div className="ml-16">
