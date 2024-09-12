@@ -115,7 +115,7 @@ export async function createBanner(prevState: any, formData: FormData) {
   });
 
   if (submission.status !== "success") {
-    submission.reply();
+   return submission.reply();
   }
 
   await prisma.banner.create({

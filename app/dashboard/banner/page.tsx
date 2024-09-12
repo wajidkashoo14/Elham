@@ -73,7 +73,7 @@ export default async function BannerRoute() {
                   <TableCell>
                     <Image
                       alt="Product Image"
-                      src={item.imagesString}
+                      src={item.imageString}
                       width={64}
                       height={64}
                       className="rounded-lg h-16 w-16 object-cover"
