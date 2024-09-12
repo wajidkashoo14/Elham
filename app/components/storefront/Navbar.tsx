@@ -30,7 +30,6 @@ export default async function Navbar() {
             height={70}
             width={120}
             alt="Elham Logo"
-            loading="lazy"
           />
         </Link>
       </div>
