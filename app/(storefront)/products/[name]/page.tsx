@@ -1,6 +1,7 @@
 import { ProductCard } from "@/app/components/storefront/ProductCard";
 import prisma from "@/app/lib/db";
 import { notFound } from "next/navigation";
+import { unstable_noStore as noStore } from "next/cache";
 
 async function fetchData(productCategory: string) {
   switch (productCategory) {
@@ -72,6 +73,7 @@ export default async function CategoriesPage({
 }: {
   params: { name: string };
 }) {
+  noStore()
   const { data, title } = await fetchData(params.name);
   return (
     <section>
