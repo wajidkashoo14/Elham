@@ -5,6 +5,7 @@ import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ShoppingBag } from "lucide-react";
 import { UserDropdown } from "./UserDropdown";
 import { Button } from "@/components/ui/button";
+import Logo from '../../../public/Primarylogo.png';
 import {
   LoginLink,
   RegisterLink,
@@ -26,7 +27,7 @@ export default async function Navbar() {
       <div className="flex items-center">
         <Link href="/">
           <Image
-            src="/logo.jpg"
+            src={Logo}
             height={80}
             width={150}
             alt="Elham Logo"
