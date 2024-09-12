@@ -25,12 +25,12 @@ export default async function Navbar() {
     <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
       <div className="flex items-center">
         <Link href="/">
-          {/* <Image
+          <Image
             src="/logo.jpg"
             height={80}
             width={150}
             alt="Elham Logo"
-          /> */}
+          />
           Elham
         </Link>
       </div>
