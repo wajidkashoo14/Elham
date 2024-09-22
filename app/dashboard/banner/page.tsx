@@ -82,9 +82,9 @@ export default async function BannerRoute() {
                   <TableCell className="font-medium">{item.title}</TableCell>
                   <TableCell className="text-end">
                     <DropdownMenu>
-                      <DropdownMenuTrigger asChild>
+                      <DropdownMenuTrigger className="bg-transparent" asChild>
                         <Button size="icon" variant="ghost" className="h-4 w-4">
-                          <MoreHorizontal />
+                          <MoreHorizontal className="bg-transparent" />
                         </Button>
                       </DropdownMenuTrigger>
                       <DropdownMenuContent align="end">

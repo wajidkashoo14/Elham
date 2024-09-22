@@ -43,7 +43,7 @@ export function ProductCard({ item }: cardProps) {
         <CarouselNext className="mr-16" />
       </Carousel>
       <div className="flex justify-between items-center mt-2">
-        <h1 className="font-semibold text-xl ">{item.name}</h1>
+        <h1 className="font-medium text-lg">{item.name}</h1>
         <h3 className="inline-flex items-center rounded-lg bg-primary/10 px-2 py-1 text-sm font-medium text-primary ring-1 ring-inset ring-primary/10">
           ${item.price}
         </h3>

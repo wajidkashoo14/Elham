@@ -29,23 +29,29 @@ export function ImageSlider({ images }: SliderProps) {
   return (
     <div className="grid gap-6 md:gap-3 items-start">
       <div className="relative overflow-hidden rounded-lg">
-        <Image
-          width={400}
-          height={400}
-          src={images[mainImageIndex]}
-          alt="Product Image"
-          className="object-cover h-[400px] w-[400px]"
-        />
+        {/* Image container with centered image */}
+        <div className="flex justify-center items-center">
+          <Image
+            width={400}
+            height={400}
+            src={images[mainImageIndex]}
+            alt="Product Image"
+            className="object-cover h-[400px] w-[400px]"
+          />
+        </div>
 
+        {/* Buttons positioned on either side of the image */}
         <div className="absolute inset-0 flex justify-between items-center px-4">
-          <Button onClick={handlePreviousClick} variant="ghost" size="icon">
-            <ChevronLeft className="h-6 w-6" />
+          <Button onClick={handlePreviousClick} size="icon">
+            <ChevronLeft className="h-6 w-6 text-white" />
           </Button>
-          <Button onClick={handleNextClick} variant="ghost" size="icon">
-            <ChevronRight className="h-6 w-6" />
+          <Button onClick={handleNextClick} size="icon">
+            <ChevronRight className="h-6 w-6 text-white" />
           </Button>
         </div>
       </div>
+
+      {/* Thumbnails section */}
       <div className="grid grid-cols-5 gap-4">
         {images.map((image, index) => (
           <div

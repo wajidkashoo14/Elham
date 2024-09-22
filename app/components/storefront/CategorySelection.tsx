@@ -37,7 +37,7 @@ export function CategoriesSelection() {
 
         <div className="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full">
           <Image
-            src='/img2.png'
+            src='/sparrow.png'
             alt="Products for men Image"
             className="object-bottom object-cover sm:absolute sm:inset-0 sm:w-full sm:h-full"
             fill
@@ -53,9 +53,9 @@ export function CategoriesSelection() {
 
         <div className="group aspect-w-2 aspect-h-1 rounded-lg overflow-hidden sm:relative sm:aspect-none sm:h-full">
           <Image
-            src='/img3.png'
+            src='/set.png'
             alt="Women product image"
-            className="object-bottom object-cover sm:absolute sm:inset-0 sm:w-full sm:h-full"
+            className="object-bottom object-contain sm:absolute sm:inset-0 sm:w-full sm:h-full"
             fill
           />
           <div className="bg-gradient-to-b from-transparent to-black opacity-55 sm:absolute sm:inset-0" />

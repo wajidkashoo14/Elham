@@ -21,7 +21,7 @@ export function DashboardNavigation() {
           className={cn(
             link.href === pathname
               ? "text-foreground"
-              : "text-muted-foreground hover:text-foreground"
+              : "text-muted-foreground hover:text-foreground", "font-semibold"
           )}
         >
           {link.name}

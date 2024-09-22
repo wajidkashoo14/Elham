@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
@@ -20,9 +20,19 @@ export const navbarLinks = [
     href: "/products/handicrafts",
   },
   {
-    id: 2,
+    id: 3,
     name: "Clothing",
     href: "/products/clothing",
+  },
+  {
+    id: 4,
+    name: "About us",
+    href: "/aboutus",
+  },
+  {
+    id: 5,
+    name: "Contact us",
+    href: "/contactus",
   },
 ];
 
@@ -30,7 +40,7 @@ export function NavbarLinks() {
   const location = usePathname();
   return (
     <div
-      className="hidden md:flex justify-center items-center gap-x-4
+      className="hidden md:flex justify-center items-center gap-x-2
     "
     >
       {navbarLinks.map((item) => (
@@ -40,7 +50,8 @@ export function NavbarLinks() {
           className={cn(
             location === item.href
               ? "bg-muted"
-              : "hover:bg-muted hover:bg-opacity-75", "group p-2 front-medium rounded-md"
+              : "hover:bg-muted hover:bg-opacity-75",
+            "group p-2 front-medium rounded-md color-[#213869]"
           )}
         >
           {item.name}
