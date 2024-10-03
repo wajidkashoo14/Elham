@@ -11,27 +11,37 @@ export const navbarLinks = [
   },
   {
     id: 1,
-    name: "All Products",
+    name: "Shop",
     href: "/products/all",
   },
-  {
-    id: 2,
-    name: "Handicrafts",
-    href: "/products/handicrafts",
-  },
+  // {
+  //   id: 1,
+  //   name: "All Products",
+  //   href: "/products/all",
+  // },
+  // {
+  //   id: 2,
+  //   name: "Handicrafts",
+  //   href: "/products/handicrafts",
+  // },
+  // {
+  //   id: 3,
+  //   name: "Clothing",
+  //   href: "/products/clothing",
+  // },
   {
     id: 3,
-    name: "Clothing",
+    name: "Our Story",
     href: "/products/clothing",
   },
   {
     id: 4,
-    name: "About us",
+    name: "Journal",
     href: "/aboutus",
   },
   {
     id: 5,
-    name: "Contact us",
+    name: "Contact",
     href: "/contactus",
   },
 ];
