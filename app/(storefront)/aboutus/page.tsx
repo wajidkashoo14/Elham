@@ -7,6 +7,25 @@ function AboutRoute() {
       <h1 className="text-transform: uppercase text-5xl font-semibold py-10 text-center border-b-[5px] border-black border-t-[5px]">
         about us
       </h1>
+      <div className="flex items-start justify-between py-10">
+        <div>
+          <Image
+            src="/img1.jpg"
+            alt="product image"
+            height={600}
+            width={400}
+            className="h-[600px] w-[600px] object-cover"
+          />
+        </div>
+        <div className="text-right py-10">
+          <h1 className="text-5xl font-extrabold">Handmade Treasures</h1>
+          <h1 className="text-5xl font-extrabold">Skilled Craftsmanship</h1>
+          <h1 className="text-5xl font-extrabold">Timeless Beauty</h1>
+          <h1 className="text-5xl font-extrabold">Masterful Creations</h1>
+          <h1 className="text-5xl font-extrabold">Unique Crafting</h1>
+        </div>
+      </div>
+
       <div className="grid grid-cols-3 gap-4 max-w-5xl mt-8">
         <div>
           <h2>About us</h2>
@@ -68,14 +87,23 @@ function AboutRoute() {
           className="w-full h-[400px]"
         />
       </div>
-      <div className="flex items-start justify-between gap-10">
+      <div className="flex items-start justify-between gap-10 border-b-[5px] border-black py-10">
         <div className="w-1/2 text-4xl font-extrabold">
           Discover Kashmiri handcrafted treasures, including Clothing, Crafted
           Goods, and the Kashmir Collection, blending artistry, tradition, and
           elegance.
         </div>
         <div className="w-1/2">
-         Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis veritatis odio placeat! Voluptatum consequatur, in autem soluta maiores consequuntur dolores vitae recusandae. Molestiae mollitia inventore, pariatur sint adipisci nam debitis ut. Consequuntur explicabo fugit officiis illum ipsum fuga adipisci perspiciatis, quam commodi voluptas numquam ut sunt nam, qui minima ipsam necessitatibus nisi modi non voluptatibus nulla asperiores reprehenderit, facilis doloribus? Rem eaque fugit maiores odit commodi! Exercitationem sapiente, laborum dolor, eligendi eveniet eaque maxime delectus repellendus nostrum ipsa laboriosam iusto!
+          Lorem ipsum dolor sit amet consectetur adipisicing elit. Reiciendis
+          veritatis odio placeat! Voluptatum consequatur, in autem soluta
+          maiores consequuntur dolores vitae recusandae. Molestiae mollitia
+          inventore, pariatur sint adipisci nam debitis ut. Consequuntur
+          explicabo fugit officiis illum ipsum fuga adipisci perspiciatis, quam
+          commodi voluptas numquam ut sunt nam, qui minima ipsam necessitatibus
+          nisi modi non voluptatibus nulla asperiores reprehenderit, facilis
+          doloribus? Rem eaque fugit maiores odit commodi! Exercitationem
+          sapiente, laborum dolor, eligendi eveniet eaque maxime delectus
+          repellendus nostrum ipsa laboriosam iusto!
         </div>
       </div>
     </div>
