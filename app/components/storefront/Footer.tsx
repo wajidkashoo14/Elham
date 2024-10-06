@@ -51,8 +51,8 @@ export default function Footer() {
                 >
                   All Products
                 </Link>
-                <Link href="/" className="cursor-pointer pt-4 lg:py-0">
-                  Other
+                <Link href="#faq" id="faq" className="cursor-pointer pt-4 lg:py-0">
+                  FAQ
                 </Link>
               </ul>
             </div>
@@ -93,16 +93,16 @@ export default function Footer() {
               </p>
               <div className="flex items-center gap-2">
                 <Link href="/">
-                  <FaFacebookSquare className="w-6 h-6" />
+                  <FaFacebookSquare className="w-6 h-6 !bg-[#213869] text-white" />
                 </Link>
                 <Link href="/">
-                  <FaInstagramSquare className="w-6 h-6" />
+                  <FaInstagramSquare className="w-6 h-6 !bg-[#213869] text-white" />
                 </Link>
                 <Link href="/">
-                  <FaLinkedin className="w-6 h-6" />
+                  <FaLinkedin className="w-6 h-6 !bg-[#213869] text-white" />
                 </Link>
                 <Link href="/">
-                  <FaSquarePinterest className="w-6 h-6" />
+                  <FaSquarePinterest className="w-6 h-6 !bg-[#213869] text-white" />
                 </Link>
               </div>
               <div className="flex items-center gap-2">
