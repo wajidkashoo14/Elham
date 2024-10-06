@@ -5,36 +5,6 @@ import { usePathname } from "next/navigation";
 import Dropdown from "./NavDropdown";
 
 export const navbarLinks = [
-  // {
-  //   id: 0,
-  //   name: "Home",
-  //   href: "/",
-  // },
-  // {
-  //   id: 1,
-  //   name: "Shop",
-  //   href: "/products/all",
-  // },
-  // {
-  //   id: 1,
-  //   name: "All Products",
-  //   href: "/products/all",
-  // },
-  // {
-  //   id: 2,
-  //   name: "Handicrafts",
-  //   href: "/products/handicrafts",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Clothing",
-  //   href: "/products/clothing",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Our Story",
-  //   href: "/products/clothing",
-  // },
   {
     id: 4,
     name: "Journal",
@@ -51,34 +21,24 @@ const shopDropdownOptions = [
   {
     href: "/products/clothing",
     label: "Clothing",
-    desc: "Handcrafted clothing, made with care for a truly unique style.",
-    image: "/clothing-icon.svg",
   },
   {
     href: "/products/handicrafts",
     label: "Crafted Goods",
-    desc: "Beautifully crafted goods, designed with care for a unique touch.",
-    image: "/crafted-goods.png",
   },
   {
     href: "/products/all",
     label: "Kashmir Collection",
-    desc: "Exquisite Kashmiri paper mache, crafted by hand with tradition and care.",
-    image: "/draw-icon.png",
   },
 ];
 const ourJourneyDropdownOptions = [
   {
     href: "/founder",
     label: "About the Founder",
-    desc: "A brief introduction/my background + vision + motivations",
-    image: "/clothing-icon.svg",
   },
   {
     href: "/artisans",
     label: "Meet Our Artisans",
-    desc: "Highlighting the skills, stories of the artisans we work with",
-    image: "/crafted-goods.png",
   },
 ];
 

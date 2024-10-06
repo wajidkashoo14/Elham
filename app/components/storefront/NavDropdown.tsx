@@ -8,8 +8,8 @@ import { usePathname } from "next/navigation";
 interface DropdownOption {
   href: string;
   label: string;
-  desc: string;
-  image: string;
+  desc?: string;
+  image?: string;
 }
 
 interface DropdownProps {
@@ -47,11 +47,11 @@ const Dropdown: React.FC<DropdownProps> = ({
       {/* Trigger with animated arrow */}
       <button
         className={cn(
-            options.some((option) => option.href === location)
-              ? "bg-muted"
-              : "hover:bg-muted hover:bg-opacity-75",
-            "flex items-center justify-center hover:bg-gray-100 rounded-lg w-full p-2"
-          )}
+          options.some((option) => option.href === location)
+            ? "bg-muted"
+            : "hover:bg-muted hover:bg-opacity-75",
+          "flex items-center justify-center hover:bg-gray-100 rounded-lg w-full p-2"
+        )}
         aria-expanded={dropdownOpen}
       >
         <span
@@ -89,15 +89,14 @@ const Dropdown: React.FC<DropdownProps> = ({
                   "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full py-3 px-1"
                 )}
               >
-                <div>
+                {/* <div>
                   <Image
-                    src={option?.image}
                     alt={`${option.label}-icon`}
                     width={50}
                     height={50}
                     objectFit="cover"
                   />
-                </div>
+                </div> */}
                 <div
                   className={cn(
                     location === option.href
