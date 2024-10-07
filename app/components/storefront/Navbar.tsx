@@ -4,12 +4,8 @@ import { NavbarLinks } from "./NavbarLinks";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
 import { ShoppingBag, User, User2 } from "lucide-react";
 import { UserDropdown } from "./UserDropdown";
-import { Button } from "@/components/ui/button";
 
-import {
-  LoginLink,
-  RegisterLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { redis } from "@/app/lib/redis";
 import { Cart } from "@/app/lib/interfaces";
 
@@ -58,11 +54,6 @@ export default async function Navbar() {
             Login
             <User2 className="h-4 w-4" />
           </LoginLink>
-
-          {/* <span className="h-6 w-px bg-gray-200"></span>
-          <Button asChild>
-            <RegisterLink>Sign Up</RegisterLink>
-          </Button> */}
         </div>
       )}
     </nav>

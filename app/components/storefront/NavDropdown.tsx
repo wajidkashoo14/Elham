@@ -1,7 +1,6 @@
 import { useState } from "react";
 import { ChevronDown } from "lucide-react";
 import Link from "next/link";
-import Image from "next/image";
 import { cn } from "@/lib/utils";
 import { usePathname } from "next/navigation";
 
@@ -89,14 +88,6 @@ const Dropdown: React.FC<DropdownProps> = ({
                   "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full py-3 px-1"
                 )}
               >
-                {/* <div>
-                  <Image
-                    alt={`${option.label}-icon`}
-                    width={50}
-                    height={50}
-                    objectFit="cover"
-                  />
-                </div> */}
                 <div
                   className={cn(
                     location === option.href

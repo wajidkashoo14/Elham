@@ -56,7 +56,7 @@ export function NavbarLinks() {
         Home
       </Link>
       <Dropdown triggerText="Shop" options={shopDropdownOptions} />
-      <Dropdown triggerText="Our Journey" options={ourJourneyDropdownOptions} />
+      <Dropdown triggerText="Our Story" options={ourJourneyDropdownOptions} />
       {navbarLinks.map((item) => (
         <Link
           href={item.href}
