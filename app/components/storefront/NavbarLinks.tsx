@@ -19,24 +19,25 @@ export const navbarLinks = [
 
 const shopDropdownOptions = [
   {
+    id: 1,
     href: "/products/clothing",
     label: "Clothing",
   },
   {
+    id: 2,
     href: "/products/handicrafts",
     label: "Crafted Goods",
   },
-  {
-    href: "/products/all",
-    label: "Kashmir Collection",
-  },
+  { id: 3, href: "/products/all", label: "Kashmir Collection" },
 ];
 const ourJourneyDropdownOptions = [
   {
+    id: 1,
     href: "/founder",
     label: "About the Founder",
   },
   {
+    id: 2,
     href: "/artisans",
     label: "Meet Our Artisans",
   },
@@ -52,12 +53,14 @@ export function NavbarLinks() {
           location === "/" ? "bg-muted" : "hover:bg-muted hover:bg-opacity-75",
           "group p-2 font-medium rounded-md color-[#213869]"
         )}
+      
       >
         Home
       </Link>
       <Dropdown triggerText="Shop" options={shopDropdownOptions} />
       <Dropdown triggerText="Our Story" options={ourJourneyDropdownOptions} />
       {navbarLinks.map((item) => (
+        <div key={item.id}>
         <Link
           href={item.href}
           key={item.id}
@@ -70,6 +73,7 @@ export function NavbarLinks() {
         >
           {item.name}
         </Link>
+        </div>
       ))}
     </div>
   );

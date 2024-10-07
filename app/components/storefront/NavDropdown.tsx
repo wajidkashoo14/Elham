@@ -77,7 +77,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           className={`absolute ${alignClass} md:w-[250px] cursor-pointer mt-1 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10 p-2`}
         >
           {options.map((option, index) => (
-            <div>
+            <div key={index}>
               <Link
                 key={index}
                 href={option.href}
