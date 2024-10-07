@@ -2,14 +2,10 @@ import Image from "next/image";
 import Link from "next/link";
 import { NavbarLinks } from "./NavbarLinks";
 import { getKindeServerSession } from "@kinde-oss/kinde-auth-nextjs/server";
-import { ShoppingBag } from "lucide-react";
+import { ShoppingBag, User, User2 } from "lucide-react";
 import { UserDropdown } from "./UserDropdown";
-import { Button } from "@/components/ui/button";
 
-import {
-  LoginLink,
-  RegisterLink,
-} from "@kinde-oss/kinde-auth-nextjs/components";
+import { LoginLink } from "@kinde-oss/kinde-auth-nextjs/components";
 import { redis } from "@/app/lib/redis";
 import { Cart } from "@/app/lib/interfaces";
 
@@ -21,9 +17,8 @@ export default async function Navbar() {
 
   const total = cart?.items.reduce((sum, item) => sum + item.quantity, 0) || 0;
 
-
   return (
-    <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5 flex items-center justify-between">
+    <nav className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-2 flex items-center justify-between">
       <div className="flex items-center">
         <Link href="/">
           <Image
@@ -55,13 +50,10 @@ export default async function Navbar() {
         </div>
       ) : (
         <div className="hidden md:flex md:flex-1 md:items-center md:justify-end md:space-x-2">
-          <Button asChild>
-            <LoginLink>Sign in</LoginLink>
-          </Button>
-          <span className="h-6 w-px bg-gray-200"></span>
-          <Button asChild>
-            <RegisterLink>Sign Up</RegisterLink>
-          </Button>
+          <LoginLink className="flex items-center gap-2 font-medium">
+            Login
+            <User2 className="h-4 w-4" />
+          </LoginLink>
         </div>
       )}
     </nav>

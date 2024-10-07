@@ -37,7 +37,7 @@ export function UserDropdown({ email, name, userImage }: iAppProps) {
         </DropdownMenuLabel>
         <DropdownMenuSeparator />
         <DropdownMenuItem asChild>
-          <LogoutLink>Log Out</LogoutLink>
+          <LogoutLink className="cursor-pointer">Log Out</LogoutLink>
         </DropdownMenuItem>
       </DropdownMenuContent>
     </DropdownMenu>
