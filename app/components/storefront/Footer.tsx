@@ -41,7 +41,7 @@ export default function Footer() {
                   Kashmir Collection
                 </Link>
                 <Link
-                  href="/products/craftedgoods"
+                  href="/products/crafted-goods"
                   className="cursor-pointer pt-4 lg:py-0"
                 >
                   Crafted Goods
@@ -78,13 +78,13 @@ export default function Footer() {
                 >
                   Privacy Policy
                 </Link>
-                <Link href="/founders" className="cursor-pointer pt-4 lg:py-0">
+                <Link href="/founder" className="cursor-pointer pt-4 lg:py-0">
                   Founders
                 </Link>
                 <Link href="/artisans" className="cursor-pointer pt-4 lg:py-0">
                   Artisans
                 </Link>
-                <Link href="/journal" className="cursor-pointer pt-4 lg:py-0">
+                <Link href="/aboutus" className="cursor-pointer pt-4 lg:py-0">
                   Journal
                 </Link>
                 <Link
@@ -100,7 +100,7 @@ export default function Footer() {
           <div className="text-black flex flex-col f-f-l">
             <h1 className="text-xl font-medium text-left">Conect</h1>
             <div className="flex flex-col gap-5">
-              <p className="mt-3 text-[15px]">
+              <p className="mt-3 text-[15px] text-gray-700">
                 Get early info about our latest products
               </p>
               <div className="flex items-center gap-2">
