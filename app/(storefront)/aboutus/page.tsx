@@ -38,7 +38,7 @@ function AboutRoute() {
             doloremque corrupti repellendus id totam magni, mollitia et earum
             necessitatibus cupiditate nobis voluptatem itaque minus ullam. Ad,
             eius corrupti voluptas quidem, facere sed commodi doloremque
-            provident iste quia velit ex assumenda. Sed autem asperiores a!
+            provident iste quia velit ex assumenda. Sed autem asperiores!
             Sapiente quos eos dignissimos possimus!
           </p>
           <p className="mt-8">
