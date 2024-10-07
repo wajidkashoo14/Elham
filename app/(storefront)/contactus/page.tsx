@@ -61,7 +61,7 @@ export default function ContactRoute() {
           </div>
         </div>
         <div className="flex flex-col gap-4 w-1/2">
-          <h2 className="font-medium">Leave us a message</h2>
+          <h2 className="font-medium text-lg">Leave us a message</h2>
           <Input type="text" placeholder="Name" />
           <Input type="email" placeholder="Email" />
           <Textarea
