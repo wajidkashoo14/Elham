@@ -6,7 +6,7 @@ export default function OurTeam() {
     <div>
       <div className="py-10 flex justify-between">
         <div className="flex flex-col items-start gap-5 w-1/2">
-          <h1 className="text-2xl font-semibold">Our team</h1>
+          <h1 className="text-2xl font-semibold">Our Team</h1>
           <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita
             doloremque commodi error nobis possimus neque dolores, eaque quia
