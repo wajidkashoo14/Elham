@@ -2,38 +2,9 @@
 import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import Dropdown from "./NavDropdown";
 
 export const navbarLinks = [
-  {
-    id: 0,
-    name: "Home",
-    href: "/",
-  },
-  {
-    id: 1,
-    name: "ShopOnline",
-    href: "/products/all",
-  },
-  // {
-  //   id: 1,
-  //   name: "All Products",
-  //   href: "/products/all",
-  // },
-  // {
-  //   id: 2,
-  //   name: "Handicrafts",
-  //   href: "/products/handicrafts",
-  // },
-  // {
-  //   id: 3,
-  //   name: "Clothing",
-  //   href: "/products/clothing",
-  // },
-  {
-    id: 3,
-    name: "Our Story",
-    href: "/products/clothing",
-  },
   {
     id: 4,
     name: "Journal",
@@ -46,13 +17,46 @@ export const navbarLinks = [
   },
 ];
 
+const shopDropdownOptions = [
+  {
+    href: "/products/clothing",
+    label: "Clothing",
+  },
+  {
+    href: "/products/handicrafts",
+    label: "Crafted Goods",
+  },
+  {
+    href: "/products/all",
+    label: "Kashmir Collection",
+  },
+];
+const ourJourneyDropdownOptions = [
+  {
+    href: "/founder",
+    label: "About the Founder",
+  },
+  {
+    href: "/artisans",
+    label: "Meet Our Artisans",
+  },
+];
+
 export function NavbarLinks() {
   const location = usePathname();
   return (
-    <div
-      className="hidden md:flex justify-center items-center gap-x-2
-    "
-    >
+    <div className="hidden md:flex justify-center items-center gap-x-3">
+      <Link
+        href="/"
+        className={cn(
+          location === "/" ? "bg-muted" : "hover:bg-muted hover:bg-opacity-75",
+          "group p-2 font-medium rounded-md color-[#213869]"
+        )}
+      >
+        Home
+      </Link>
+      <Dropdown triggerText="Shop" options={shopDropdownOptions} />
+      <Dropdown triggerText="Our Story" options={ourJourneyDropdownOptions} />
       {navbarLinks.map((item) => (
         <Link
           href={item.href}
@@ -61,7 +65,7 @@ export function NavbarLinks() {
             location === item.href
               ? "bg-muted"
               : "hover:bg-muted hover:bg-opacity-75",
-            "group p-2 front-medium rounded-md color-[#213869]"
+            "group p-2 font-medium rounded-md color-[#213869]"
           )}
         >
           {item.name}
