@@ -27,13 +27,13 @@ import {
           Our products are made from high-quality papier-mâché and wood, sourced and prepared to ensure durability and authenticity.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
+        <AccordionItem value="item-4">
           <AccordionTrigger>Can I request custom designs on a box or other item?</AccordionTrigger>
           <AccordionContent>
           Yes, we welcome custom orders. If you have a specific design or color scheme in mind, please contact us, and we’ll do our best to create a piece that reflects your vision.
           </AccordionContent>
         </AccordionItem>
-        <AccordionItem value="item-3">
+        <AccordionItem value="item-5">
           <AccordionTrigger>How do I care for and maintain these items?</AccordionTrigger>
           <AccordionContent>
           For papier-mâché and wooden products, avoid exposure to moisture and direct sunlight. Clean gently with a soft, dry cloth to maintain their beauty and longevity.
