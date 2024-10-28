@@ -1,46 +1,27 @@
-import {
-  Carousel,
-  CarouselContent,
-  CarouselItem,
-  CarouselNext,
-  CarouselPrevious,
-} from "@/components/ui/carousel";
-import prisma from "../../lib/db";
-import Image from "next/image";
+import React from "react";
 
-async function getData() {
-  const data = await prisma.banner.findMany({
-    orderBy: {
-      createdAt: "desc",
-    },
-  });
-
-  return data;
-}
-
-export default async function Hero() {
-  const data = await getData();
+const Hero = () => {
   return (
-    <Carousel>
-      <CarouselContent>
-        {data.map((item) => (
-          <CarouselItem key={item.id}>
-            <div className="relative h-[60vh] lg:h-[80vh]">
-              <Image
-                src={item.imageString}
-                alt="Banner-image"
-                fill
-                className="object-cover w-full h-full rounded-lg"
-              />
-              <div className="absolute top-6 left-6 bg-opacity-75 bg-black text-white p-6 rounded-xl shadow-lg transition transform hover:scale-105">
-                <h1 className="text-xl lg:text-4xl font-bold">{item.title}</h1>
-              </div>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="ml-16" />
-      <CarouselNext className="mr-16" />
-    </Carousel>
+    <div className="relative w-full h-screen rounded-xl overflow-hidden bg-transparent">
+      <div className="absolute top-0 left-0 w-full h-full">
+        <video
+          className="w-full h-full object-cover object-center"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/video.mp4" type="video/mp4" />
+          Your browser does not support the video tag.
+        </video>
+      </div>
+      <div className="relative z-10 flex items-center justify-center h-full bg-transparent bg-opacity-80">
+        <h1 className="text-white text-4xl md:text-6xl font-bold opacity-80">
+          Welcome to Our Store
+        </h1>
+      </div>
+    </div>
   );
-}
+};
+
+export default Hero;
