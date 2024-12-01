@@ -74,7 +74,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       {/* Dropdown Menu */}
       {dropdownOpen && (
         <div
-          className={`absolute ${alignClass} md:w-[250px] cursor-pointer mt-1 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10 p-2`}
+          className={`absolute ${alignClass} md:w-[250px] cursor-pointer pt-1 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10 p-2`}
         >
           {options.map((option, index) => (
             <div key={index}>
