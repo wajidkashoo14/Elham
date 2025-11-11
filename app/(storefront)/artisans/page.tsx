@@ -13,7 +13,7 @@ export default function OurTeam() {
             doloremque commodi error nobis possimus neque dolores, eaque quia
             dolore, voluptatibus iure quibusdam rem similique! Nulla minima
             voluptates cupiditate, facilis nemo odit totam! Magnam velit
-            consectetur quidem ut, pariatur numquam nisi.
+            consectetur quidem ut, pariatur numquam.
           </p>
           <Button>Learn More</Button>
         </div>
