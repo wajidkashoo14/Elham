@@ -68,7 +68,7 @@ export function NavbarLinks() {
             location === item.href
               ? "bg-muted"
               : "hover:bg-muted hover:bg-opacity-75",
-            "group p-2 font-medium rounded-md color-[#213869]"
+            "group font-medium rounded-md color-[#213869]"
           )}
         >
           {item.name}
