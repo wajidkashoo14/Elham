@@ -49,7 +49,7 @@ const Dropdown: React.FC<DropdownProps> = ({
           options.some((option) => option.href === location)
             ? "bg-muted"
             : "hover:bg-muted hover:bg-opacity-75",
-          "flex items-center justify-center hover:bg-gray-100 rounded-lg w-full p-2"
+          "flex items-center justify-center hover:bg-gray-100 rounded-lg w-full px-2"
         )}
         aria-expanded={dropdownOpen}
       >
@@ -74,7 +74,7 @@ const Dropdown: React.FC<DropdownProps> = ({
       {/* Dropdown Menu */}
       {dropdownOpen && (
         <div
-          className={`absolute ${alignClass} md:w-[250px] cursor-pointer pt-1 w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10 p-2`}
+          className={`absolute ${alignClass} md:w-[250px] cursor-pointer w-48 bg-white rounded-lg shadow-lg ring-1 ring-black ring-opacity-5 z-10 px-2`}
         >
           {options.map((option, index) => (
             <div key={index}>
@@ -85,7 +85,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                   location === option.href
                     ? "bg-muted"
                     : "hover:bg-muted hover:bg-opacity-75",
-                  "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full py-3 px-1"
+                  "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full py-2 px-1"
                 )}
               >
                 <div
