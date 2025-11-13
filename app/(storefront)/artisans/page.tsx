@@ -1,3 +1,5 @@
+"use client";
+
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import React from "react";
@@ -52,11 +54,11 @@ export default function OurTeam({ team = sampleTeam }: { team?: Member[] }) {
           <div className="flex-1 flex flex-col gap-5 lg:w-1/2">
             <h1 className="text-2xl lg:text-3xl font-semibold">Our Team</h1>
             <p className="text-sm lg:text-base text-justify text-gray-700">
-             ` We’re a small crew of designers, makers and storytellers
+              We're a small crew of designers, makers and storytellers
               passionate about preserving traditional crafts while building
               modern, sustainable products. Each member brings a unique skillset
               — from hand-painting and inlay work to product design and
-              marketing.`
+              marketing.
             </p>
             <div className="flex items-center gap-4">
               <Button>Learn More</Button>
