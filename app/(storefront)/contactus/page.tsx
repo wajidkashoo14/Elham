@@ -38,8 +38,8 @@ export default function ContactRoute() {
             Get In Touch
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            `We'd love to hear from you. Send us a message and we'll respond as
-            soon as possible`
+            {`We'd love to hear from you. Send us a message and we'll respond as
+            soon as possible`}
           </p>
         </div>
       </div>
@@ -57,8 +57,8 @@ export default function ContactRoute() {
             </div>
 
             <p className="text-gray-700 text-lg leading-relaxed">
-              Have a question or want to work together? Fill out the form or
-              reach out through any of our contact channels below.
+             {` Have a question or want to work together? Fill out the form or
+              reach out through any of our contact channels below.`}
             </p>
 
             {/* Contact Cards */}
@@ -211,7 +211,7 @@ export default function ContactRoute() {
             </div>
 
             <p className="text-sm text-gray-500 text-center mt-6">
-              We'll get back to you within 24 hours
+              {`We'll get back to you within 24 hours`}
             </p>
           </div>
         </div>
@@ -224,8 +224,8 @@ export default function ContactRoute() {
             Ready to Start a Conversation?
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            `Whether you have a question, feedback, or just want to say hello,
-            we're here to help`
+            {`Whether you have a question, feedback, or just want to say hello,
+            we're here to help`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-blue-600 hover:bg-gray-100 h-12 px-8 font-semibold shadow-xl">

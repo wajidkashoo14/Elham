@@ -36,8 +36,8 @@ function AboutRoute() {
             About Us
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            `Preserving Kashmir's rich heritage through exquisite handcrafted
-            artistry`
+            {`Preserving Kashmir's rich heritage through exquisite handcrafted
+            artistry`}
           </p>
         </div>
       </div>
@@ -121,19 +121,19 @@ function AboutRoute() {
             <div className="lg:col-span-2 p-8 lg:p-12 space-y-6">
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
-                  `At the heart of Kashmir's majestic valleys lies a tradition of
-                  craftsmanship that has been passed down through generations.
-                  Our artisans pour their soul into every creation, transforming
-                  raw materials into treasures that tell stories of heritage,
-                  passion, and unparalleled skill`.
+                  {`At the heart of Kashmir's majestic valleys lies a tradition
+                  of craftsmanship that has been passed down through
+                  generations. Our artisans pour their soul into every creation,
+                  transforming raw materials into treasures that tell stories of
+                  heritage, passion, and unparalleled skill`}.
                 </p>
                 <p className="text-lg">
-                  `We believe in preserving the authenticity of Kashmiri
+                  {`We believe in preserving the authenticity of Kashmiri
                   handicrafts while embracing contemporary aesthetics. Each
                   piece is a testament to the dedication of our master craftsmen
                   who have spent decades perfecting their art. From intricate
                   embroidery to hand-woven textiles, every creation carries the
-                  essence of Kashmir's rich cultural tapestry.`
+                  essence of Kashmir's rich cultural tapestry.`}
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
