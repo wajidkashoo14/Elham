@@ -83,12 +83,12 @@ export default function Founders() {
             <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto lg:mx-0 rounded-full"></div>
 
             <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
-              With over a decade of experience in transforming visionary ideas into reality, 
+              `With over a decade of experience in transforming visionary ideas into reality, 
               Wajid leads our mission to innovate and excel. His commitment to excellence 
               and forward-thinking approach has positioned our company at the forefront of 
               the industry. Passionate about creating meaningful impact, Wajid believes in 
               the power of collaboration and continuous innovation to drive sustainable growth 
-              and deliver exceptional value to our clients.
+              and deliver exceptional value to our clients.`
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
@@ -182,7 +182,7 @@ export default function Founders() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              Let's collaborate and create something extraordinary together
+              `Let's collaborate and create something extraordinary together`
             </p>
             <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 shadow-xl text-lg px-8">
               Get In Touch

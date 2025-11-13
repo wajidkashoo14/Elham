@@ -1,4 +1,4 @@
-'use client'
+"use client";
 import { ImLocation2 } from "react-icons/im";
 import {
   FaPhoneAlt,
@@ -29,14 +29,17 @@ export default function ContactRoute() {
           <div className="inline-block mb-6">
             <div className="flex items-center gap-3 bg-blue-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-400/30">
               <MessageCircle className="w-5 h-5 text-blue-300" />
-              <span className="text-blue-200 font-semibold text-sm uppercase tracking-wider">Contact Us</span>
+              <span className="text-blue-200 font-semibold text-sm uppercase tracking-wider">
+                Contact Us
+              </span>
             </div>
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
             Get In Touch
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            We'd love to hear from you. Send us a message and we'll respond as soon as possible
+            `We'd love to hear from you. Send us a message and we'll respond as
+            soon as possible`
           </p>
         </div>
       </div>
@@ -54,7 +57,8 @@ export default function ContactRoute() {
             </div>
 
             <p className="text-gray-700 text-lg leading-relaxed">
-              Have a question or want to work together? Fill out the form or reach out through any of our contact channels below.
+              Have a question or want to work together? Fill out the form or
+              reach out through any of our contact channels below.
             </p>
 
             {/* Contact Cards */}
@@ -65,7 +69,9 @@ export default function ContactRoute() {
                     <MapPin className="w-6 h-6 text-white" />
                   </div>
                   <div>
-                    <h3 className="font-semibold text-gray-900 mb-1">Location</h3>
+                    <h3 className="font-semibold text-gray-900 mb-1">
+                      Location
+                    </h3>
                     <p className="text-gray-600">Nantes, France</p>
                   </div>
                 </div>
@@ -100,17 +106,26 @@ export default function ContactRoute() {
             <div className="bg-gradient-to-br from-slate-800 to-blue-900 rounded-2xl p-8 shadow-xl">
               <h3 className="text-xl font-bold text-white mb-6">Follow Us</h3>
               <div className="flex items-center gap-4">
-                <Link href="https://www.facebook.com/elham.fr/" className="group">
+                <Link
+                  href="https://www.facebook.com/elham.fr/"
+                  className="group"
+                >
                   <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
                     <FaFacebook className="w-6 h-6 text-blue-300 group-hover:text-blue-200" />
                   </div>
                 </Link>
-                <Link href="https://www.instagram.com/shopelham.fr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw==" className="group">
+                <Link
+                  href="https://www.instagram.com/shopelham.fr?utm_source=ig_web_button_share_sheet&igsh=ZDNlZDc0MzIxNw=="
+                  className="group"
+                >
                   <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
                     <FaInstagram className="w-6 h-6 text-pink-300 group-hover:text-pink-200" />
                   </div>
                 </Link>
-                <Link href="https://www.linkedin.com/company/elham-fr?trk=profile-position" className="group">
+                <Link
+                  href="https://www.linkedin.com/company/elham-fr?trk=profile-position"
+                  className="group"
+                >
                   <div className="w-12 h-12 bg-white/10 backdrop-blur-sm rounded-xl flex items-center justify-center hover:bg-white/20 transition-all duration-300 group-hover:scale-110">
                     <FaLinkedin className="w-6 h-6 text-blue-300 group-hover:text-blue-200" />
                   </div>
@@ -145,11 +160,13 @@ export default function ContactRoute() {
 
             <div className="space-y-6">
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">Your Name</label>
+                <label className="text-sm font-semibold text-gray-700">
+                  Your Name
+                </label>
                 <div className="relative">
-                  <Input 
-                    type="text" 
-                    placeholder="John Doe" 
+                  <Input
+                    type="text"
+                    placeholder="John Doe"
                     className="pl-12 h-12 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   />
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
@@ -159,11 +176,13 @@ export default function ContactRoute() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">Email Address</label>
+                <label className="text-sm font-semibold text-gray-700">
+                  Email Address
+                </label>
                 <div className="relative">
-                  <Input 
-                    type="email" 
-                    placeholder="john@example.com" 
+                  <Input
+                    type="email"
+                    placeholder="john@example.com"
                     className="pl-12 h-12 border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all"
                   />
                   <div className="absolute left-4 top-1/2 -translate-y-1/2 text-gray-400">
@@ -173,14 +192,16 @@ export default function ContactRoute() {
               </div>
 
               <div className="space-y-2">
-                <label className="text-sm font-semibold text-gray-700">Your Message</label>
+                <label className="text-sm font-semibold text-gray-700">
+                  Your Message
+                </label>
                 <Textarea
                   placeholder="Tell us what's on your mind..."
                   className="h-[180px] border-slate-300 focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20 transition-all resize-none"
                 />
               </div>
 
-              <Button 
+              <Button
                 onClick={handleSubmit}
                 className="w-full h-12 bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold shadow-lg hover:shadow-xl transition-all duration-300 text-base"
               >
@@ -203,13 +224,17 @@ export default function ContactRoute() {
             Ready to Start a Conversation?
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            Whether you have a question, feedback, or just want to say hello, we're here to help
+            `Whether you have a question, feedback, or just want to say hello,
+            we're here to help`
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Button className="bg-white text-blue-600 hover:bg-gray-100 h-12 px-8 font-semibold shadow-xl">
               Schedule a Call
             </Button>
-            <Button variant="outline" className="border-2 border-white text-white hover:bg-white/10 h-12 px-8 font-semibold">
+            <Button
+              variant="outline"
+              className="border-2 border-white text-white hover:bg-white/10 h-12 px-8 font-semibold"
+            >
               View FAQ
             </Button>
           </div>

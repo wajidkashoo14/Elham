@@ -27,14 +27,17 @@ function AboutRoute() {
           <div className="inline-block mb-6">
             <div className="flex items-center gap-3 bg-blue-500/20 backdrop-blur-sm px-6 py-3 rounded-full border border-blue-400/30">
               <Sparkles className="w-5 h-5 text-blue-300" />
-              <span className="text-blue-200 font-semibold text-sm uppercase tracking-wider">Our Story</span>
+              <span className="text-blue-200 font-semibold text-sm uppercase tracking-wider">
+                Our Story
+              </span>
             </div>
           </div>
           <h1 className="text-5xl lg:text-7xl font-bold text-white mb-6">
             About Us
           </h1>
           <p className="text-xl text-blue-100 max-w-3xl mx-auto">
-            Preserving Kashmir's rich heritage through exquisite handcrafted artistry
+            `Preserving Kashmir's rich heritage through exquisite handcrafted
+            artistry`
           </p>
         </div>
       </div>
@@ -83,8 +86,12 @@ function AboutRoute() {
               { label: "Unique Products", value: "500+" },
             ].map((stat, index) => (
               <div key={index} className="text-center text-white">
-                <div className="text-4xl lg:text-5xl font-bold mb-2">{stat.value}</div>
-                <div className="text-sm lg:text-base opacity-90">{stat.label}</div>
+                <div className="text-4xl lg:text-5xl font-bold mb-2">
+                  {stat.value}
+                </div>
+                <div className="text-sm lg:text-base opacity-90">
+                  {stat.label}
+                </div>
               </div>
             ))}
           </div>
@@ -114,10 +121,19 @@ function AboutRoute() {
             <div className="lg:col-span-2 p-8 lg:p-12 space-y-6">
               <div className="space-y-6 text-gray-700 leading-relaxed">
                 <p className="text-lg">
-                  At the heart of Kashmir's majestic valleys lies a tradition of craftsmanship that has been passed down through generations. Our artisans pour their soul into every creation, transforming raw materials into treasures that tell stories of heritage, passion, and unparalleled skill.
+                  `At the heart of Kashmir's majestic valleys lies a tradition of
+                  craftsmanship that has been passed down through generations.
+                  Our artisans pour their soul into every creation, transforming
+                  raw materials into treasures that tell stories of heritage,
+                  passion, and unparalleled skill`.
                 </p>
                 <p className="text-lg">
-                  We believe in preserving the authenticity of Kashmiri handicrafts while embracing contemporary aesthetics. Each piece is a testament to the dedication of our master craftsmen who have spent decades perfecting their art. From intricate embroidery to hand-woven textiles, every creation carries the essence of Kashmir's rich cultural tapestry.
+                  `We believe in preserving the authenticity of Kashmiri
+                  handicrafts while embracing contemporary aesthetics. Each
+                  piece is a testament to the dedication of our master craftsmen
+                  who have spent decades perfecting their art. From intricate
+                  embroidery to hand-woven textiles, every creation carries the
+                  essence of Kashmir's rich cultural tapestry.`
                 </p>
                 <div className="flex items-center gap-4 pt-4">
                   <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
@@ -147,7 +163,7 @@ function AboutRoute() {
               className="group relative bg-white rounded-2xl p-6 shadow-lg hover:shadow-2xl transition-all duration-300 hover:-translate-y-2 border border-slate-200"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-blue-500/0 to-purple-500/0 group-hover:from-blue-500/10 group-hover:to-purple-500/10 rounded-2xl transition-all duration-300"></div>
-              
+
               <div className="relative z-10 flex flex-col items-center text-center space-y-4">
                 <div className="w-16 h-16 bg-gradient-to-br from-blue-500 to-purple-500 rounded-2xl flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform duration-300">
                   <feature.icon className="w-8 h-8 text-white" />
@@ -173,8 +189,12 @@ function AboutRoute() {
           />
           <div className="absolute inset-0 bg-gradient-to-t from-slate-900/70 via-slate-900/20 to-transparent flex items-end p-8 lg:p-12">
             <div className="text-white">
-              <h3 className="text-3xl lg:text-4xl font-bold mb-2">Masters at Work</h3>
-              <p className="text-lg opacity-90">Witness the magic of traditional craftsmanship</p>
+              <h3 className="text-3xl lg:text-4xl font-bold mb-2">
+                Masters at Work
+              </h3>
+              <p className="text-lg opacity-90">
+                Witness the magic of traditional craftsmanship
+              </p>
             </div>
           </div>
         </div>
@@ -189,11 +209,14 @@ function AboutRoute() {
                 <div className="inline-block">
                   <div className="flex items-center gap-2 bg-white/20 backdrop-blur-sm px-4 py-2 rounded-full">
                     <Heart className="w-4 h-4" />
-                    <span className="text-sm font-semibold uppercase tracking-wider">Our Mission</span>
+                    <span className="text-sm font-semibold uppercase tracking-wider">
+                      Our Mission
+                    </span>
                   </div>
                 </div>
                 <h2 className="text-3xl lg:text-4xl font-bold leading-tight">
-                  Discover Kashmiri handcrafted treasures, blending artistry, tradition, and elegance
+                  Discover Kashmiri handcrafted treasures, blending artistry,
+                  tradition, and elegance
                 </h2>
                 <div className="h-1 w-20 bg-white/50 rounded-full"></div>
               </div>
@@ -201,13 +224,15 @@ function AboutRoute() {
 
             <div className="bg-white/10 backdrop-blur-sm p-8 lg:p-16 flex items-center">
               <p className="text-white/90 text-base lg:text-lg leading-relaxed">
-                We are dedicated to bringing you the finest collection of Kashmiri handicrafts, 
-                from exquisite clothing and crafted goods to our exclusive Kashmir Collection. 
-                Each piece represents a harmonious blend of centuries-old techniques and contemporary 
-                design sensibilities. Our artisans work tirelessly to ensure that every product not 
-                only meets but exceeds the highest standards of quality and authenticity. We invite 
-                you to explore our collection and become part of a legacy that celebrates the rich 
-                cultural heritage of Kashmir.
+                `We are dedicated to bringing you the finest collection of
+                Kashmiri handicrafts, from exquisite clothing and crafted goods
+                to our exclusive Kashmir Collection. Each piece represents a
+                harmonious blend of centuries-old techniques and contemporary
+                design sensibilities. Our artisans work tirelessly to ensure
+                that every product not only meets but exceeds the highest
+                standards of quality and authenticity. We invite you to explore
+                our collection and become part of a legacy that celebrates the
+                rich cultural heritage of Kashmir.`
               </p>
             </div>
           </div>
@@ -218,9 +243,12 @@ function AboutRoute() {
       <div className="max-w-7xl mx-auto px-4 lg:px-8 pb-20">
         <div className="bg-gradient-to-r from-slate-50 to-blue-50 rounded-3xl p-12 text-center border border-slate-200">
           <Users className="w-16 h-16 mx-auto mb-6 text-blue-600" />
-          <h3 className="text-3xl font-bold text-gray-900 mb-4">Join Our Artisan Community</h3>
+          <h3 className="text-3xl font-bold text-gray-900 mb-4">
+            Join Our Artisan Community
+          </h3>
           <p className="text-gray-700 mb-8 max-w-2xl mx-auto">
-            Experience the beauty of handcrafted excellence and become part of our story
+            Experience the beauty of handcrafted excellence and become part of
+            our story
           </p>
           <button className="bg-gradient-to-r from-blue-600 to-purple-600 hover:from-blue-700 hover:to-purple-700 text-white font-semibold px-8 py-4 rounded-full shadow-lg hover:shadow-xl transition-all duration-300 transform hover:-translate-y-1">
             Explore Our Collection

@@ -85,7 +85,7 @@ const Dropdown: React.FC<DropdownProps> = ({
                   location === option.href
                     ? "bg-muted"
                     : "hover:bg-muted hover:bg-opacity-75",
-                  "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full py-2 px-1"
+                  "flex items-center justify-center gap-3 hover:bg-gray-100 rounded-lg w-full p-2"
                 )}
               >
                 <div
