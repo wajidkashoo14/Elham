@@ -159,7 +159,7 @@ export default function Founders() {
 
                 <div className="relative z-10">
                   <p className="text-gray-300 italic leading-relaxed mb-6 text-base">
-                    "{testimonial.text}"
+                    {testimonial.text}
                   </p>
 
                   <div className="pt-4 border-t border-slate-700">
