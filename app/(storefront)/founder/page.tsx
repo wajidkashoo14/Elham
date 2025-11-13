@@ -7,18 +7,18 @@ export default function Founders() {
     {
       text: "Working with Wajid has been transformative for our business. His innovative approach and dedication to excellence set him apart.",
       author: "Sarah Johnson",
-      role: "CEO, TechCorp"
+      role: "CEO, TechCorp",
     },
     {
       text: "An exceptional leader with a vision that inspires. Wajid's expertise and commitment to quality are unmatched in the industry.",
       author: "Michael Chen",
-      role: "Director, Innovation Labs"
+      role: "Director, Innovation Labs",
     },
     {
       text: "Wajid brings creativity and strategic thinking to every project. His ability to solve complex problems is truly remarkable.",
       author: "Emma Williams",
-      role: "Product Manager, StartupXYZ"
-    }
+      role: "Product Manager, StartupXYZ",
+    },
   ];
 
   return (
@@ -54,16 +54,28 @@ export default function Founders() {
                 className="relative w-[250px] h-[250px] lg:w-[350px] lg:h-[350px] rounded-full object-cover border-8 border-white shadow-xl"
               />
             </div>
-            
+
             {/* Social Links */}
             <div className="flex gap-4">
-              <Button size="icon" variant="outline" className="rounded-full hover:bg-blue-600 hover:text-white transition-colors">
+              <Button
+                size="icon"
+                variant="outline"
+                className="rounded-full hover:bg-blue-600 hover:text-white transition-colors"
+              >
                 <Linkedin className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="outline" className="rounded-full hover:bg-blue-400 hover:text-white transition-colors">
+              <Button
+                size="icon"
+                variant="outline"
+                className="rounded-full hover:bg-blue-400 hover:text-white transition-colors"
+              >
                 <Twitter className="w-5 h-5" />
               </Button>
-              <Button size="icon" variant="outline" className="rounded-full hover:bg-gray-700 hover:text-white transition-colors">
+              <Button
+                size="icon"
+                variant="outline"
+                className="rounded-full hover:bg-gray-700 hover:text-white transition-colors"
+              >
                 <Mail className="w-5 h-5" />
               </Button>
             </div>
@@ -83,12 +95,13 @@ export default function Founders() {
             <div className="h-1 w-20 bg-gradient-to-r from-blue-600 to-purple-600 mx-auto lg:mx-0 rounded-full"></div>
 
             <p className="text-gray-700 leading-relaxed text-base lg:text-lg">
-              `With over a decade of experience in transforming visionary ideas into reality, 
-              Wajid leads our mission to innovate and excel. His commitment to excellence 
-              and forward-thinking approach has positioned our company at the forefront of 
-              the industry. Passionate about creating meaningful impact, Wajid believes in 
-              the power of collaboration and continuous innovation to drive sustainable growth 
-              and deliver exceptional value to our clients.`
+              {`With over a decade of experience in transforming visionary ideas
+              into reality, Wajid leads our mission to innovate and excel. His
+              commitment to excellence and forward-thinking approach has
+              positioned our company at the forefront of the industry.
+              Passionate about creating meaningful impact, Wajid believes in the
+              power of collaboration and continuous innovation to drive
+              sustainable growth and deliver exceptional value to our clients.`}
             </p>
 
             <div className="flex flex-wrap gap-3 justify-center lg:justify-start">
@@ -148,7 +161,7 @@ export default function Founders() {
                   <p className="text-gray-300 italic leading-relaxed mb-6 text-base">
                     "{testimonial.text}"
                   </p>
-                  
+
                   <div className="pt-4 border-t border-slate-700">
                     <p className="text-white font-semibold text-lg">
                       {testimonial.author}
@@ -162,7 +175,11 @@ export default function Founders() {
                 {/* Star rating */}
                 <div className="flex gap-1 mt-4">
                   {[...Array(5)].map((_, i) => (
-                    <svg key={i} className="w-5 h-5 fill-yellow-400" viewBox="0 0 20 20">
+                    <svg
+                      key={i}
+                      className="w-5 h-5 fill-yellow-400"
+                      viewBox="0 0 20 20"
+                    >
                       <path d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
                     </svg>
                   ))}
@@ -182,9 +199,12 @@ export default function Founders() {
               Ready to Start Your Journey?
             </h2>
             <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-              `Let's collaborate and create something extraordinary together`
+              {`Let's collaborate and create something extraordinary together`}
             </p>
-            <Button size="lg" className="bg-white text-blue-600 hover:bg-gray-100 shadow-xl text-lg px-8">
+            <Button
+              size="lg"
+              className="bg-white text-blue-600 hover:bg-gray-100 shadow-xl text-lg px-8"
+            >
               Get In Touch
             </Button>
           </div>
