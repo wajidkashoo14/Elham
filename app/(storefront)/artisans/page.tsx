@@ -1,3 +1,4 @@
+'use client'
 import React from 'react';
 
 export default function ArtisansPage() {
@@ -71,9 +72,9 @@ export default function ArtisansPage() {
               </span>
             </h1>
             <p className="text-lg md:text-xl text-gray-600 leading-relaxed max-w-3xl mx-auto">
-              We're a passionate collective of designers, makers, and storytellers dedicated to preserving 
+              {`We're a passionate collective of designers, makers, and storytellers dedicated to preserving 
               traditional crafts while creating modern, sustainable products. Each member brings unique expertise—from 
-              hand-painting and inlay work to product design and strategic marketing.
+              hand-painting and inlay work to product design and strategic marketing.`}
             </p>
           </div>
         </div>
@@ -158,9 +159,9 @@ export default function ArtisansPage() {
             The Complete Elham Team
           </h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-            Our extended team consists of artisans, product managers, and community liaisons working 
+            {`Our extended team consists of artisans, product managers, and community liaisons working 
             together to bring traditional Kashmiri handicrafts to the world—every piece is designed 
-            and inspected with care.
+            and inspected with care.`}
           </p>
         </div>
 
@@ -241,8 +242,8 @@ export default function ArtisansPage() {
             Want to Work With Us?
           </h2>
           <p className="text-blue-100 text-lg mb-8 max-w-2xl mx-auto">
-            We're always looking for talented artisans and passionate individuals to join our mission 
-            of preserving and promoting traditional Kashmiri crafts.
+            {`We're always looking for talented artisans and passionate individuals to join our mission 
+            of preserving and promoting traditional Kashmiri crafts.`}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <button className="px-8 py-4 bg-white text-blue-600 font-semibold rounded-full hover:bg-blue-50 transition-colors shadow-xl hover:shadow-2xl transform hover:-translate-y-1 duration-300">
