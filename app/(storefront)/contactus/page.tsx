@@ -51,7 +51,7 @@ export default function ContactRoute() {
           <div className="space-y-8">
             <div>
               <h2 className="text-3xl lg:text-4xl font-bold text-gray-900 mb-4">
-                Let's Connect
+                {`Let's Connect`}
               </h2>
               <div className="h-1 w-20 bg-gradient-to-r from-blue-500 to-purple-500 rounded-full"></div>
             </div>
