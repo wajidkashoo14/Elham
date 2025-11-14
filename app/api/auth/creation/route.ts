@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { unstable_noStore as noStore } from "next/cache";
 
 export async function GET() {
-  noStore()
+  noStore();
   const { getUser } = getKindeServerSession();
   const user = await getUser();
 
@@ -30,5 +30,9 @@ export async function GET() {
     });
   }
 
-  return NextResponse.redirect(process.env.NODE_ENV === "development" ? "http://localhost:3000/": "https://elham-lk91.vercel.app/")
+  return NextResponse.redirect(
+    process.env.NODE_ENV === "development" 
+      ? "http://localhost:3000/" 
+      : "https://elham-pi.vercel.app/"
+  );
 }
